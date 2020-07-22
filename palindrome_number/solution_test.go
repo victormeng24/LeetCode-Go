@@ -2,6 +2,43 @@ package palindrome_number
 
 import "testing"
 
-func TestSolution(t *testing.T) {
-	t.Log(isPalindrome(1221))
+func Test_isPalindrome(t *testing.T) {
+	type args struct {
+		x int
+	}
+	tests := []struct {
+		name string
+		args args
+		want bool
+	}{
+		// TODO: Add test cases.
+		{
+			name: "case1",
+			args: args{
+				x: -121,
+			},
+			want: false,
+		},
+		{
+			name: "case2",
+			args: args{
+				x: 121,
+			},
+			want: true,
+		},
+		{
+			name: "case3",
+			args: args{
+				x: 10,
+			},
+			want: false,
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := isPalindrome(tt.args.x); got != tt.want {
+				t.Errorf("isPalindrome() = %v, want %v", got, tt.want)
+			}
+		})
+	}
 }
