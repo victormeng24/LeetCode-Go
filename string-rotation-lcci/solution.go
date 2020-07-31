@@ -24,6 +24,7 @@ import "strings"
 链接：https://leetcode-cn.com/problems/string-rotation-lcci
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
+
 func isFlipedString(s1 string, s2 string) bool {
 	return len(s1) == len(s2) && strings.Contains(s1 + s1, s2)
 }
